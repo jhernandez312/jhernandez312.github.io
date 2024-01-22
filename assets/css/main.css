@@ -541,11 +541,33 @@
 
 /* Box */
 
+
 	.box {
-		border-radius: 4px;
+		border-radius: 0.5rem;
 		margin-bottom: 2em;
 		background: #2c2c32;
 		text-align: center;
+		filter: grayscale(1);
+	}
+
+	.box:hover {
+		filter: grayscale(0)
+	}
+	.box video {
+		width: 100% !important;
+		border-radius: px 4px 0 0;
+		border-radius: 0.5rem;
+
+
+
+	}
+	.box .clip:hover {
+		box-shadow: 0px 0px 23px #82cec6;
+		transition: all 200ms ease-in-out;
+	}
+	.box .clip2:hover {
+		box-shadow: 0px 0px 30px #92a2d6;
+		transition: all 200ms ease-in-out;
 	}
 
 		.box > :last-child,
@@ -559,7 +581,12 @@
 		}
 
 		.box .image img {
-			border-radius: 4px 4px 0 0;
+			border-radius: 0.5rem;
+			aspect-ratio: 3 / 2;
+		}
+		.box .image img:hover {
+			box-shadow: 0px 0px 23px #92a2d6;
+			transition: all 200ms ease-in-out;
 		}
 
 		.box .inner {
@@ -580,6 +607,60 @@
 			border-radius: 0;
 			padding: 0;
 		}
+
+		.slider-wrapper {
+			position: relative;
+			margin: 0 auto;
+		}
+
+		.slider {
+			display: flex;
+			aspect-ratio: 16 / 9;
+			overflow-x: auto;
+			scroll-snap-type: x mandatory;
+			scroll-behavior: smooth;
+			border-radius: 0.5rem;
+			-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+			scrollbar-width: none; /* Hide scrollbar Firefox */
+		}
+		.slider:hover {
+			box-shadow: 0px 0px 26px #82cec6;
+			transition: all 200ms ease-in-out;
+		}
+
+		/* Hide scrollbar for Chrome, Safari and Opera */
+		.slider::-webkit-scrollbar {
+			display: none;
+		}
+
+		.slider img {
+			flex: 1 0 100%;
+			scroll-snap-align: start;
+			object-fit: cover;
+		}
+
+		.slider-nav {
+			display: flex;
+			column-gap: 1rem;
+			position: absolute;
+			bottom: 1.25rem;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 1;
+		}
+
+		.slider-nav button {
+			height: 0.5rem;
+			background-color: #313131;
+			opacity: 0.75;
+			transition: opacity ease 250ms;
+		}
+
+		.slider-nav a:hover {
+			opacity: 1;
+		}
+
+/*end */
 
 /* Icon */
 
@@ -1152,14 +1233,13 @@
 				}
 
 		}
-/* test */
+/* top navigation banner */
 	#test nav {
 		background-color: #202024;
 		width: 100%;
 		height: 75px;
-	}
-	#test ul {
-		padding-left: 78%;
+		display: flex; /* Use flexbox */
+		justify-content: flex-end; /* Align items to the end */
 	}
 
 	#test ul li {
@@ -1173,8 +1253,7 @@
 		font-size: 20px;
 		padding: 0 15px;
 		display: block;
-	}
-
+}
 /* Banner */
 
 	#banner {
@@ -1318,7 +1397,7 @@
 			display: block;
 			height: 100%;
 			left: 0;
-			opacity: 0.45;
+			opacity: 0.55;
 			position: absolute;
 			top: 0;
 			width: 100%;
