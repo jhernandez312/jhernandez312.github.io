@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<!--
+	Full Motion by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+--><html><head><title>Jessica Hernandez</title><meta charset="utf-8"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="assets/css/main.css"></head><body id="top">
+			<!--test-->
+				<section id="test">
+					<nav>
+						<ul>
+							<li> <a href="index.html"> Home </a></li>
+							<li> <a href="resume/r.pdf"> Resume </a></li>
+						</ul>
+					</nav>
+
+				</section>
+			<!-- Banner -->
+			<!--
+				To use a video as your background, set data-video to the name of your video without
+				its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+				formats to work correctly.
+			-->
+				<section id="banner" img="images/banner.jpg"><div class="inner">
+						<header><h1>Jessica Hernandez</h1>
+							<p>Currently a Computer Science Bachelor's student at Georgia Tech, specializing in Artificial Intelligence and Modeling & Simulation</p>
+						</header><a href="#main" class="more">Learn More</a>
+					</div>
+				</section><!-- Main --><div id="main">
+					<div class="inner">
+
+					<!-- Boxes -->
+						<div class="thumbnails">
+
+							<div class="box">
+								<video src="videos/dd.mp4" type="video/mp4" loop class="clip"></video>
+								<div class="inner">
+									<h3>GBA Moon Lander Game</h3>
+									<p>Built in 1 week. Created custom graphics for game and added artificial gravity.</p>
+									<a href="https://github.com/jhernandez312" class="button fit">GitHub Link</a>
+								</div>
+
+							</div>
+
+							<div class="box">
+								<video src="videos/s.mp4" type="video/mp4" loop class="clip2"></video>
+								<div class="inner">
+									<h3>Drone Delivery Service</h3>
+									<p>A large-scale 5000+ lines of code programming project made from scratch. </p>
+									<a href="https://github.com/jhernandez312" class="button style2 fit">GitHub Link</a>
+								</div>
+							</div>
+
+
+							<div class="box">
+								<a href="#" class="image fit"><img src="images/wafer.jpg" alt="" width="600" height="338"></a>
+								<div class="inner">
+									<h3>Chip-Scale Power Supercapacitor Research</h3>
+									<p>Worked with PhD student Julia Allen to fabricate supercapacitors to provide high-power energy storage for microelectronics systems. Manufactured silicon wafers with carbon nanotubes, facilitated the assembly of supercapacitors. Collaborated with team members to present information to members from NASA’s Marshal Space Flight Center.
+									</p>
+								</div>
+							</div>
+							<div class="box">
+								<video src="videos/study.mp4" type="video/mp4" loop class="clip2"></video>
+								<div class="inner">
+									<h3>Georgia Tech Tutoring & Academic Support (TAS)</h3>
+									<p>I'm currently drop-in tutor, PLUS Mentor, and PLUS Leader for TAS. As a drop-in tutor, I provide morning drop-in tutoring for Linear Algebra 4 hours per week. As a mentor, I oversee the scheduling and sessions of mentees and hold meetings to discuss updates and provide additional training. As a PLUS Leader, I lead exam review sessions of up to ~300 people with two other PLUS leaders</p>
+								</div>
+							</div>
+							<div class="box">
+								<section class="container">
+									<div class="slider-wrapper">
+										<div class="slider">
+											<img id="slide-1" src="images/BME2.png" alt="3D rendering of an imaginary orange planet in space" />
+											<img id="slide-2" src="images/BME3.png" alt="3D rendering of an imaginary green planet in space" />
+											<img id="slide-3" src="images/BME.png" alt="3D rendering of an imaginary blue planet in space" />
+										</div>
+										<div class="slider-nav">
+											<button onclick="changeSlide(1)"></button>
+											<button onclick="changeSlide(2)"></button>
+											<button onclick="changeSlide(3)"></button>
+										</div>
+									</div>
+								</section>
+
+								<div class="inner">
+									<h3>Guinea Worm Disease Filter Bucket Prototype</h3>
+									<p>Helped the Carter Center eradicate Guinea Worm Disease (GWD) in the country of Chad. Utilized an iterative design process that emphasized the fundamentals of the engineering design process and collaborated with team members to develop the Filter Bucket: a cost-effective filtration device that allows people to collect and filter water in one place
+										</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer"><div class="inner">
+						<h2>Contact me:</h2>
+
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/jhernandez312/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="mailto:jhernandez312@gatech.edu" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul></div>
+						<p>Photo credits: Jessica Hernandez </p>
+				</footer><div class="copyright">
+				</b></a>.
+			</div>
+
+		<!-- Scripts -->
+			<script>
+				const clip = document.querySelectorAll('.clip, .clip2');
+				for (let i = 0; i<clip.length;i++){
+					clip[i].addEventListener('mouseenter',
+					function(e){
+						clip[i].play()
+					})
+					clip[i].addEventListener('mouseout', function (e){clip[i].pause()})
+				}
+			</script>
+			<script src="assets/js/jquery.min.js"></script><script src="assets/js/jquery.scrolly.min.js"></script></script><script src="assets/js/skel.min.js"></script><script src="assets/js/util.js"></script><script src="assets/js/main.js"></script></body></html><script>
+				function changeSlide(slideNumber) {
+					const sliders = document.querySelectorAll('.slider img');
+					sliders.forEach((slider, index) => {
+						slider.style.display = (index === slideNumber - 1) ? 'block' : 'none';
+					});
+				}
+
+				// Initialize the first slide to be visible
+				window.onload = () => changeSlide(1);
+			</script>
